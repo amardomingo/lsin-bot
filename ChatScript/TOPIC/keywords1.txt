@@ -3,6 +3,8 @@
 ~saludo ( Que_tal HI Buenas Hola )
 ~despedida ( Luego Nos_vemos Adios )
 ~teaching ( Ayudar Aprender )
+~proyects ( pfg pfc Proyectos Proyecto )
 ~saludando ( ~saludo )
+~proyectos ( ~proyects )
 ~elearning ( profesor ~teaching )
 ~despidiendo ( ~despedida )

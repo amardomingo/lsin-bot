@@ -1,0 +1,34 @@
+proyectos, project .GSICONCEPT
+proyecto, project .GSICONCEPT
+pfc, project .GSICONCEPT
+publicacion, publication .GSICONCEPT
+publicación, publication .GSICONCEPT
+publicaciones, publication .GSICONCEPT
+libro, publication .GSICONCEPT
+libros, publication .GSICONCEPT
+conferencias, publication .GSICONCEPT
+conferencia, publication .GSICONCEPT
+master, publication .GSICONCEPT
+masters, publication .GSICONCEPT
+tesis, publication .GSICONCEPT
+revista, publication .GSICONCEPT
+revistas, publication .GSICONCEPT
+procedimientos, publication .GSICONCEPT
+procedimiento, publication .GSICONCEPT
+articulo, publication .GSICONCEPT
+articulos, publication .GSICONCEPT
+miembro, member .GSICONCEPT
+miembros, member .GSICONCEPT
+profesor, member .GSICONCEPT
+profesores, member .GSICONCEPT
+profesor titular, member .GSICONCEPT
+profesor asociado, member .GSICONCEPT
+investigadores, member .GSICONCEPT
+investigador, member .GSICONCEPT
+investigador de postgrado, member .GSICONCEPT
+doctorandos, member .GSICONCEPT
+doctorando, member .GSICONCEPT
+catedratico, member .GSICONCEPT
+catedraticos, member .GSICONCEPT
+becario de grado, member .GSICONCEPT
+becario, member .GSICONCEPT

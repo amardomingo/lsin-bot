@@ -1,4 +1,4 @@
-79 #! [import carpetafacts/kb-java iteracion]
+79 #! [import FACTS/kb-java iteracion]
 240 #! [listkb]
 380 #! [java question iteracion]
 724 #! [java question iteracion]

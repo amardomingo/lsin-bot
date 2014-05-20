@@ -2,7 +2,7 @@
 concept: ~saludo [Hola Buenas Hi Que_tal]
 concept: ~despedida [Adios Nos_vemos Luego]
 concept: ~teaching [Aprender Ayudar]
-
+concept: ~proyects [Proyecto Proyectos pfc pfg]
 
 topic: ~saludando (~saludo)
 
@@ -15,7 +15,10 @@ u: (~saludo)
     ^noerase() ^repeat()
 	[Hola.] [Buenas.]
 	
-
+topic: ~proyectos (~proyects)
+u:  (~proyects)
+    ^noerase() ^repeat()
+    Tenemos NPROYECTOS proyectos. Te muestro una grafica. \[sendSefarad proyects topic \]
 	
 	
 topic: ~elearning (~teaching profesor)

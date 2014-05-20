@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 
     /**/
     $('form#userinput').submit(function(){
-
+        console.log('form submit')
         // serialize the form
         var $form = $(this);
         var $input_field = $form.children('input[name=q]');
