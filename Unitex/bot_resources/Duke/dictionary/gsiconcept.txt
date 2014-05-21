@@ -17,6 +17,8 @@ procedimientos, publication .GSICONCEPT
 procedimiento, publication .GSICONCEPT
 articulo, publication .GSICONCEPT
 articulos, publication .GSICONCEPT
+persona, member .GSICONCEPT
+personas, member .GSICONCEPT
 miembro, member .GSICONCEPT
 miembros, member .GSICONCEPT
 profesor, member .GSICONCEPT

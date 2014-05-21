@@ -2,5 +2,10 @@ pre
 listkb
 testok
 testfail
+que
+hace
+preguntar
+sobre
+acerca
 eres
 profesor

@@ -1,7 +1,8 @@
 
-concept: ~saludo [Hola Buenas Hi Que_tal]
-concept: ~despedida [Adios Nos_vemos Luego]
+concept: ~saludo [Hola Buenas Hi "Que tal"]
+concept: ~despedida [Adios "Nos vemos" Luego]
 concept: ~teaching [Aprender Ayudar]
+concept: ~gsi [gsi "grupo de sistemas inteligentes" laboratorio investigacion]
 concept: ~proyects [Proyecto Proyectos pfc pfg]
 
 topic: ~saludando (~saludo)
@@ -19,18 +20,21 @@ topic: ~proyectos (~proyects)
 u:  (~proyects)
     ^noerase() ^repeat()
     Tenemos NPROYECTOS proyectos. Te muestro una grafica. \[sendSefarad proyects topic \]
-	
+
+topic: ~grupo (~gsi)
+u: (que [hace ~es] * ~gsi)
+    ^noerase() ^repeat()
+    El Grupo de Sistemas Inteligentes reliza labores de investigación sobre tecnologías semánticas, procesado del lenguaje natural, y otros.
+
+u: (preguntar [sobre acerca] * ~gsi)
+   ^noerase() ^repeat()
+    Puedes preguntarme sobre proyectos, publicaciones y personal del GSI.
 	
 topic: ~elearning (~teaching profesor)
 
 u: (eres el profesor) 
     ^noerase() ^repeat()
 	No; soy un bot asistente para ayudarte a encontrar respuestas.
-	
-u: ($bot=duke ~teaching)
-    ^noerase() ^repeat()
-	Puedo ayudarte con tus preguntas sobre Java.
-
 	
 topic: ~despidiendo (~despedida)
 
