@@ -88,7 +88,8 @@ def TalkToBot():
     for command in cs_output_array:
         resp=executeOOB(command,query_user,query_bot);  
         nl_response+= resp[0]
-        sefarad_response+=resp[1]
+        if resp[1] != "":
+           sefarad_response+=resp[1]
 
     #Detect the @full_response flag used to ask the user for feedback
     if '@fullresponse' in nl_response:
@@ -156,10 +157,26 @@ def executeOOB(content,usr,bot):
     return (nl_response, sefarad_response)
 
 def sendSefarad(content):
-    print "TODO"
-    sefarad_response = '{"concepto":"publicaciones", "filtro":"years"}'
-    return "", sefarad_response
+    print content
+    content = content.replace('[', '')
+    content = content.replace(']', '')
+    content = content.replace('sendSefarad ', '')
+    sefarad_response = ' {'
+    print content
+    for pair in content.split(','):
+        key_value = [val.strip() for val in pair.split(':')] 
+        print key_value
+        if key_value[0] == 'concepto':
+            sefarad_response+= '"concept":'+'"'+key_value[1]+'"'
+        elif key_value[0] == 'filter':
+            sefarad_response += ', "filter": { "' + key_value[1] + '":'
+        elif key_value[0] == 'value':
+            sefarad_response += '"' +key_value[1] + '" }'
+    sefarad_response+= '}'
     
+    print sefarad_response
+    return "", sefarad_response
+
 #Sends an input to Unitex to process it
 def sendUnitex(user, query, bot, lang):
 
@@ -222,7 +239,6 @@ def sendUnitex(user, query, bot, lang):
 #Sends an input to ChatScript to process it
 def sendChatScript(query, bot, user):
 
-    logger.info("ChatScript input: "+query)
     
     if "[sendcs" in query:
         query = re.sub('sendcs ','',query)
@@ -230,8 +246,8 @@ def sendChatScript(query, bot, user):
         query = re.sub('\]','',query)   
         query = re.sub('\(','[',query)
         query = re.sub('\)',']',query)  
-
-
+    
+    logger.info("ChatScript input: "+query)
     #Remove special characters and lower case
     query = sub('["\'¿¡@#$]', '', query)
     query = query.lower()
@@ -301,8 +317,8 @@ def renderJson(query, response, bot, user, fresponse, sefarad_response):
     response = response.replace('"', '\\"')
     result = '{"dialog": {"sessionid": "'+user+'", "user": "'+user+'", "bot": "'+bot+'", "q": "'+query+'", "response": "'+response+'", "test": "General Saludo", "url": "nul", "flashsrc": "../flash/happy.swf", "full_response": "'+fresponse+'", "state": "happy", "mood": "happy"'
     if sefarad_response != "":
-        result+= ', "sefarad":'+sefarad_response
-    result+='}}'
+        result+= ', "sefarad": '+sefarad_response
+    result+=' }}'
     return result
 
     

@@ -65,6 +65,7 @@ jQuery(document).ready(function($){
               $input_field.focus();   // set focus on main input
             })
           .error(function(data_resp){
+              console.log(data_resp.dialog)
               printerrorMessage("No se ha conseguido completar la petición");
               $input_field.focus();   // set focus on main input
             });

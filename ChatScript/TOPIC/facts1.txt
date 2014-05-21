@@ -1,6 +1,6 @@
 + Buenas 
-+ Que_tal 
-+ Nos_vemos 
++ "Que tal" 
++ "Nos vemos" 
 + Luego 
 + Aprender 
 + Ayudar 

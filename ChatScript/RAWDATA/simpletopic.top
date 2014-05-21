@@ -4,6 +4,7 @@ concept: ~despedida [Adios "Nos vemos" Luego]
 concept: ~teaching [Aprender Ayudar]
 concept: ~gsi [gsi "grupo de sistemas inteligentes" laboratorio investigacion]
 concept: ~proyects [Proyecto Proyectos pfc pfg]
+concept: ~members [miembros personas profesores becarios]
 
 topic: ~saludando (~saludo)
 
@@ -15,11 +16,6 @@ u: (%input>1 ~saludo)
 u: (~saludo) 
     ^noerase() ^repeat()
 	[Hola.] [Buenas.]
-	
-topic: ~proyectos (~proyects)
-u:  (~proyects)
-    ^noerase() ^repeat()
-    Tenemos NPROYECTOS proyectos. Te muestro una grafica. \[sendSefarad proyects topic \]
 
 topic: ~grupo (~gsi)
 u: (que [hace ~es] * ~gsi)
@@ -35,17 +31,12 @@ topic: ~elearning (~teaching profesor)
 u: (eres el profesor) 
     ^noerase() ^repeat()
 	No; soy un bot asistente para ayudarte a encontrar respuestas.
+
 	
 topic: ~despidiendo (~despedida)
 
 u: (~despedida) 
     ^noerase() ^repeat()
 	[Hasta otra.] [Nos vemos.] 
-
-
-
-
-
-
 
 

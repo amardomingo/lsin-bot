@@ -1,7 +1,5 @@
 pre
 listkb
-testok
-testfail
 que
 hace
 preguntar
